@@ -15,14 +15,17 @@ class UserController extends Controller
   }
 
   public function show($id)
-  {
-    // if($user = User::find($id))
-    //   return redirect()->route('users.index');
-     
+  {     
     if(!$user = User::find($id))
       return redirect()->route('users.index');
 
-    return view('users.show', compact('user'));
+    $title = "Usuário ". $user->name;
+    return view('users.show', compact('user', 'title'));
     
+  }
+
+  public function new()
+  {
+
   }
 }
