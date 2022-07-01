@@ -8,7 +8,7 @@ use App\Http\Controllers\{
 
 Route::get('/users',[UserController::class,'index'])->name('users.index');
 Route::get('/users/{id}',[UserController::class,'show'])->name('users.show');
-// Route::get('/user/novo',[UserController::class,"create"])->name('users.create');
+Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
 
 Route::get('/viacep', [ViaController::class,'index'])->name('viacep.index');
 Route::post('/viacep', [ViaController::class,'index'])->name('viacep.index.post');
