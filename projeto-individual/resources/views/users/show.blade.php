@@ -1,5 +1,5 @@
 @extends('template.users')
-@section('title', 'Listagem de usuários')
+@section('title', $title)
 @section('body')
 
 <h1 class="mt-4">Usuário {{$user->name}}</h1>
